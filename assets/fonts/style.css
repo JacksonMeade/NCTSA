@@ -1,0 +1,20 @@
+@font-face {
+   font-family: 'Montserrat-Black';
+   src: url('Montserrat-Black/font.ttf');
+}
+@font-face {
+   font-family: 'Montserrat-ExtraBold';
+   src: url('Montserrat-ExtraBold/font.ttf');
+}
+@font-face {
+   font-family: 'Montserrat-Light';
+   src: url('Montserrat-Light/font.ttf');
+}
+@font-face {
+   font-family: 'Painting-With-Chocolate';
+   src: url('Painting-With-Chocolate/font.ttf');
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('Open-Sans/OpenSans-Regular.ttf')
+}
