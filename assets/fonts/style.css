@@ -22,3 +22,7 @@
   font-family: 'Farray';
   src: url('Farray/farray-regular.otf');
 }
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('Bahnschrift/bahnschrift.ttf');
+}
