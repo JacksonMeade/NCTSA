@@ -26,7 +26,7 @@
 
 
 
-      <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-toggleable-sm">
+      <nav id="navvy" class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-toggleable-sm">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <div class="hamburger">
                   <span></span>
@@ -149,6 +149,42 @@
     </div>-->
 
 </section>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <script src="assets/masonry/masonry.pkgd.min.js"></script>
 <script src="assets/web/assets/jquery/jquery.min.js"></script>
 <script src="assets/popper/popper.min.js"></script>
@@ -170,6 +206,19 @@
   function visit(linkName) {
     window.open(linkName, '_self');
   }
+
+  // When the user scrolls down 20px from the top of the document, slide down the navbar
+// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+    document.getElementById("navvy").style.top = "0";
+  } else {
+    document.getElementById("navvy").style.top = "-9rem";
+  }
+}
+
 </script>
 
 </body>

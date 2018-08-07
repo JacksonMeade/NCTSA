@@ -17,6 +17,9 @@ h1 {
     background: #052768;
     transition: none;
     min-height: 77px;
+    position: fixed;
+    top: -9rem;
+    transition: top 0.3s;
 }
 
 .square {
