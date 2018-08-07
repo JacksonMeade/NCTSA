@@ -18,3 +18,7 @@
   font-family: 'Open Sans';
   src: url('Open-Sans/OpenSans-Regular.ttf')
 }
+@font-face {
+  font-family: 'Farray';
+  src: url('Farray/farray-regular.otf');
+}
