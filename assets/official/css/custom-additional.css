@@ -12,8 +12,27 @@ h1 {
   font-weight: bold;
 }
 
+
 .square {
   color: rgba(255,255,255,0.2);
+  transition: all 0.2s ease-in-out;
+  z-index:3;
+  pointer-events: all;
+  -webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently */
+}
+
+.square:hover {
+  color:rgba(255,255,255,1);
+  -webkit-box-shadow: 0px 0px 70px 12px rgba(28,28,28,1);
+  -moz-box-shadow: 0px 0px 70px 12px rgba(28,28,28,1);
+  box-shadow: 0px 0px 70px 12px rgba(28,28,28,1);
+  z-index: 5;
+  transform: scale(1.1);
 }
 
 @media (max-width:768px) {
@@ -23,8 +42,9 @@ h1 {
     padding: none !important;
   }
   .square * {
-    padding: 1rem;
-    margin: 0px;
+    padding: 1rem !important;
+    margin: 0px !important;
+    font-size: 2rem !important;
   }
 }
 
@@ -40,6 +60,7 @@ h1 {
     left:0;
     bottom:0;
     width:100%;
+    font-stretch: semi-condensed;
   }
   .square::before {
     content: "";
@@ -48,6 +69,30 @@ h1 {
   }
 }
 
+.brightglow {
+  fill:white;
+  -webkit-filter: drop-shadow(0px 0px 17px rgba(255,255,255,0.7));
+  filter: drop-shadow(0px 0px 17px rgba(255,255,255,0.7));
+}
+
+@media (min-width: 798px) {
+  .brightglow {
+    padding: 4rem;
+    margin-right: 10%;
+    margin-left: 10%;
+    transform: perspective(600px) rotateY(25deg);
+    transition: all 0.2s ease-in-out;
+  }
+  /*.brightglow:hover {
+    transform: perspective(0pc) rotateY(0deg);
+  }*/
+}
+
+@media (max-width: 798px) {
+  .brightglow {
+    width:100%; padding: 0.5rem; padding-top: 2rem;
+  }
+}
 
 .custom-id {
   z-index: 0;
@@ -63,7 +108,7 @@ h1 {
 }
 
 #Main {
-  background-image: url('../../../assets/images/Balcony-NCTSA.jpg');
+  background-image: url('../../../assets/images/Balcony-NCTSA_Blurred.png');
 }
 
 .RWBGradient {
@@ -177,6 +222,45 @@ svg.map {
   opacity:1.0;
   filter:alpha(opacity=100);
   transition: 0.2s ease-in-out;
+}
+
+
+.featuredRed {
+  background-color:rgba(188,54,67,0.55);
+}
+.featuredRed:hover {
+  background-color:rgba(188,54,67,1);
+}
+
+.featuredBlue {
+  background-color:rgba(18,28,88,0.79);
+}
+.featuredBlue:hover {
+  background-color:rgba(18,28,88,1);
+}
+
+.featuredGrey {
+  background-color:rgba(118,128,128,0);
+}
+.featuredGrey:hover {
+  background-color:rgba(118,128,128,1);
+}
+
+.featuredBlack {
+  background-color:rgba(13,13,13,0.52);
+}
+.featuredBlack:hover {
+  background-color:rgba(13,13,13,1);
+}
+
+.featuredWhite {
+  background-color:rgba(255,255,255,0.27);
+  border:1px solid rgb(255,255,255,0.4);
+}
+.featuredWhite:hover {
+  background-color:rgba(255,255,255,1);
+  border:1px solid rgb(255,255,255,0);
+    color:black !important;
 }
 /* ---- Fluid typography for mobile devices ---- */
 /* 1.4 - font scale ratio ( bootstrap == 1.42857 ) */
