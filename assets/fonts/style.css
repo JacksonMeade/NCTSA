@@ -25,4 +25,5 @@
 @font-face {
   font-family: 'Bahnschrift';
   src: url('Bahnschrift/bahnschrift.ttf');
+  font-stretch: semi-condensed;
 }
