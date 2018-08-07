@@ -117,7 +117,7 @@ h1 {
 }
 
 #Main {
-  background-image: url('../../../assets/images/Balcony-NCTSA_Blurred.png');
+  background-image: url('../../../assets/images/Balcony-NCTSA_Blurred_Bluescale_Medium.png');
 }
 
 .RWBGradient {
@@ -2589,7 +2589,7 @@ body {
   width: 30px;
   height: 2px;
   border-right: 5px;
-  background-color: #333333;
+  background-color: white;
 }
 .section_4 button.navbar-toggler .hamburger span:nth-child(1) {
   top: 0;
