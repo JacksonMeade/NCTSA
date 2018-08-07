@@ -12,6 +12,13 @@ h1 {
   font-weight: bold;
 }
 
+.section_4 .navbar {
+  padding: .5rem 0;
+    background: #052768;
+    transition: none;
+    min-height: 77px;
+}
+
 
 .square {
   color: rgba(255,255,255,0.2);
@@ -1496,15 +1503,10 @@ html,
 body {
   height: auto;
   min-height: 100vh;
+  max-width:100vw;
 }
 .dropup .dropdown-toggle::after {
   display: none;
-}
-.section_4 .navbar {
-  background: #ffffff;
-  transition: none;
-  min-height: 77px;
-  padding: .5rem 0;
 }
 .section_4 .navbar-dropdown.bg-color.transparent.opened {
   background: #ffffff;
@@ -2803,12 +2805,6 @@ body {
 }
 .cid-qR2XOwWGi8 .media-container-row .row-copirayt p {
   width: 100%;
-}
-.section_4 .navbar {
-  background: #ffffff;
-  transition: none;
-  min-height: 77px;
-  padding: .5rem 0;
 }
 .section_4 .navbar-dropdown.bg-color.transparent.opened {
   background: #ffffff;
