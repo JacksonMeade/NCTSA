@@ -117,7 +117,7 @@ h1 {
 }
 
 #Main {
-  background-image: url('../../../assets/images/Balcony-NCTSA_Blurred_Bluescale_Medium.png');
+  background-image: url('../../../assets/images/Balcony-NCTSA_Blurred_Bluescale_Medium_Vignette.png');
 }
 
 .RWBGradient {
@@ -231,6 +231,12 @@ svg.map {
   opacity:1.0;
   filter:alpha(opacity=100);
   transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 798px) {
+  .sm-hide {
+  display: none;
+}
 }
 
 
