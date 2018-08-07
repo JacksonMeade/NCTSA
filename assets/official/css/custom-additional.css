@@ -117,6 +117,7 @@ h1 {
 }
 
 #Main {
+  transition: all 0.2s ease-in-out;
   background-image: url('../../../assets/images/Balcony-NCTSA_Blurred_Bluescale_Medium_Vignette.png');
 }
 

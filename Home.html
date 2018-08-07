@@ -105,7 +105,7 @@
         </div>
         <div class="col-md-4" style="position:absolute;bottom:0;right:0;">
           <div class="row">
-            <div class="col-md-6 square featuredRed" style="" onclick="visit(link)">
+            <div class="col-md-6 square featuredRed" style="" onclick="visit(link)" onmouseover="bkgd('assets/images/About_Bluescale_Medium_Vignette.png')" onmouseout="bkgd('Default')">
               <h1 style="font-size:4.75vw">ABOUT</h1>
             </div>
             <div class="col-md-6 square featuredGrey" style="" onclick="visit(link)">
@@ -117,7 +117,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-6 offset-md-6">
           <div class="row">
-            <div class="col-md-4 col-sm-12 square featuredWhite" style="" onclick="visit(link)"><!--REMEMBER TO PUT SINGLE QUOTES AROUND LINK-->
+            <div class="col-md-4 col-sm-12 square featuredWhite" style="" onclick="visit(link)" onmouseover="bkgd('assets/images/Board_Bluescale_Vignette.png')" onmouseout="bkgd('Default')"><!--REMEMBER TO PUT SINGLE QUOTES AROUND LINK-->
               <h1 style="font-size:3vw">DIRECTORY</h1>
             </div>
             <div class="col-md-4 col-sm-12 square align-top featuredBlue" style="" onclick="visit(link)">
@@ -233,6 +233,18 @@ function scrollFunction() {
   } else {
     document.getElementById("navvy").style.top = "-9rem";
   }
+}
+
+function bkgd(link) {
+  if (link == "Default") {
+    document.getElementById("Main").style.backgroundImage = "url('assets/images/Balcony-NCTSA_Blurred_Bluescale_Medium_Vignette.png')";
+  }
+  else {
+    //alert(link);
+  var output = "url('" + link + "')";
+//  alert(output);
+  document.getElementById("Main").style.backgroundImage = output;
+}
 }
 
 </script>
