@@ -23,12 +23,12 @@
 </head>
 <body>
 
-  <section class="menu section_4" once="menu" id="menu1-7">
+  <section class="col-md-4 col-sm-12 menu section_4" once="menu" id="menu1-7">
 
 
 
-      <nav id="navvy" class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-toggleable-sm">
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <nav id="navvy" class="col-md-4 col-sm-12 navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-toggleable-sm collapsed">
+          <button id="toggleButton" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <div class="hamburger">
                   <span></span>
                   <span></span>
@@ -37,7 +37,7 @@
               </div>
           </button>
           <div class="menu-logo">
-              <div class="navbar-brand">
+              <div class="navbar-brand" id="search-end">
                   <span class="navbar-logo">
                       <a href="https://official.com">
                            <img src="assets/images/NCTSALogo.png" alt="official" title="" style="height: 3.8rem;">
@@ -46,23 +46,26 @@
 
               </div>
           </div>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true" style="margin-right:4rem;"><li class="nav-item dropdown">
+              <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item dropdown">
                       <a class="nav-link link text-white dropdown-toggle display-4" href="https://official.com" data-toggle="dropdown-submenu" aria-expanded="false">
 
-                          About</a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="https://official.com">About TSA</a><a class="text-white dropdown-item display-4" href="https://official.com">Latest News</a></div>
+                          <h2 class="ofImportance">About</h2></a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="https://official.com">About TSA</a><a class="text-white dropdown-item display-4" href="https://official.com">Latest News</a></div>
                   </li>
                   <li class="nav-item dropdown">
                       <a class="nav-link link text-white dropdown-toggle display-4" href="https://official.com" data-toggle="dropdown-submenu">
 
-                          Directory</a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="https://official.com">Chapters &amp; Advisors</a><a class="text-white dropdown-item display-4" href="https://official.com">State Officers</a><a class="text-white dropdown-item display-4" href="https://official.com">Board of Directors</a><a class="text-white dropdown-item display-4" href="https://official.com">Blog</a></div>
+                          <h2 class="ofImportance">Directory</h2></a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="https://official.com">Chapters &amp; Advisors</a><a class="text-white dropdown-item display-4" href="https://official.com">State Officers</a><a class="text-white dropdown-item display-4" href="https://official.com">Board of Directors</a><a class="text-white dropdown-item display-4" href="https://official.com">Blog</a></div>
                   </li><li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="https://official.com" data-toggle="dropdown-submenu" aria-expanded="false">
 
-                          Resources</a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="https://official.com">Competitions</a><a class="text-white dropdown-item display-4" href="https://official.com">Quick Links</a><a class="text-white dropdown-item display-4" href="https://official.com">TSA Logos</a><a class="text-white dropdown-item display-4" href="https://official.com">Dress Code</a><a class="text-white dropdown-item display-4" href="https://official.com">State Officer Application</a></div></li><li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="https://official.com" data-toggle="dropdown-submenu" aria-expanded="false">
+                          <h2 class="ofImportance">Resources</h2></a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="https://official.com">Competitions</a><a class="text-white dropdown-item display-4" href="https://official.com">Quick Links</a><a class="text-white dropdown-item display-4" href="https://official.com">TSA Logos</a><a class="text-white dropdown-item display-4" href="https://official.com">Dress Code</a><a class="text-white dropdown-item display-4" href="https://official.com">State Officer Application</a></div></li><li class="nav-item dropdown"><a class="nav-link link text-white dropdown-toggle display-4" href="https://official.com" data-toggle="dropdown-submenu" aria-expanded="false">
 
-                          Events</a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="https://official.com">Regional Conferences</a><a class="text-white dropdown-item display-4" href="https://official.com">State Conference</a><a class="text-white dropdown-item display-4" href="https://official.com">National Conference</a></div></li></ul>
+                          <h2 class="ofImportance">Events</h2></a><div class="dropdown-menu"><a class="text-white dropdown-item display-4" href="https://official.com">Regional Conferences</a><a class="text-white dropdown-item display-4" href="https://official.com">State Conference</a><a class="text-white dropdown-item display-4" href="https://official.com">National Conference</a></div></li></ul>
 
           </div>
+          <div id = "glassy" class="nav-link link text-white display-4 navbar-toggler navbar-toggler-right" style="display: block !important; margin-right: 3rem; margin-top: 0.6rem;" onclick="srchBar()" >
+              <span class="customi-search custom-iconfont custom-iconfont-btn"></span></div>
       </nav>
   </section>
 
@@ -137,7 +140,7 @@
         </a>
     </div>
 </div>
-    <div class="col-md-6">
+  <!--  <div class="col-md-6">
       <div class="row" style="">
         <div class="col-4 featuredRed" style="padding: 1rem;">
             Hello world!
@@ -149,7 +152,7 @@
             Hello world!
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
   </div>
     <!--<div class="container align-center">
@@ -214,38 +217,13 @@
 <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
 <script src="assets/theme/js/script.js"></script>
 <script src="assets/slidervideo/script.js"></script>
+<script src="assets/official/js/custom-additional.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
 <script type='text/javascript'>
-  function visit(linkName) {
-    window.open(linkName, '_self');
-  }
 
-  // When the user scrolls down 20px from the top of the document, slide down the navbar
-// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
-    document.getElementById("navvy").style.top = "0";
-  } else {
-    document.getElementById("navvy").style.top = "-9rem";
-  }
-}
-
-function bkgd(link) {
-  if (link == "Default") {
-    document.getElementById("Main").style.backgroundImage = "url('assets/images/Balcony-NCTSA_Blurred_Bluescale_Medium_Vignette.png')";
-  }
-  else {
-    //alert(link);
-  var output = "url('" + link + "')";
-//  alert(output);
-  document.getElementById("Main").style.backgroundImage = output;
-}
-}
 
 </script>
 
