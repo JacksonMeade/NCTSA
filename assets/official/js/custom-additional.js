@@ -26,6 +26,8 @@ document.getElementById("Main").style.backgroundImage = output;
 }
 }
 
+
+
 function closeSearch() {
   var hamburger = document.getElementById("toggleButton");
   var searchGlass = document.getElementById("glassy");
@@ -35,18 +37,17 @@ function closeSearch() {
   bar.classList.add("col-md-4");
   bar.classList.remove("openedSesame");
 
-  hamburger.removeAttribute("onclick");
-  hamburger.setAttribute("data-toggle", "collapse");
-  hamburger.setAttribute("data-target", "#navbarSupportedContent");
-  hamburger.setAttribute("aria-controls", "navbarSupportedContent");
-  hamburger.setAttribute("aria-expanded", "false");
-  hamburger.setAttribute("aria-label", "Toggle navigation");
-
 
   searchGlass.classList.add("navbar-toggler-right");
   bar.appendChild(searchGlass);
-  bar.classList.remove("opened");
+  bar.removeAttribute('opened');
+
 }
+
+$( "#closeSearcher" ).mouseup(function() {
+  $("#toggleButton").removeAttr('disabled');
+});
+
 
 function srchBar() {
 var hamburger = document.getElementById("toggleButton");
@@ -58,12 +59,7 @@ bar.classList.remove("col-md-4");
 bar.classList.add("col-md-12");
 bar.classList.add("openedSesame");
 
-hamburger.removeAttribute("data-toggle");
-hamburger.removeAttribute("data-target");
-hamburger.removeAttribute("aria-controls");
-hamburger.removeAttribute("aria-expanded");
-hamburger.removeAttribute("aria-label");
-hamburger.setAttribute("onclick", "closeSearch()");
+hamburger.disabled=true;
 
 searchGlass.classList.remove("navbar-toggler-right");
 document.getElementById("search-end").appendChild(searchGlass);
