@@ -32,12 +32,13 @@ function closeSearch() {
   var hamburger = document.getElementById("toggleButton");
   var searchGlass = document.getElementById("glassy");
   var bar = document.getElementById("navvy");
+  var form = document.getElementById("searchForm");
 
   bar.classList.remove("col-md-12");
   bar.classList.add("col-md-4");
   bar.classList.remove("openedSesame");
 
-
+  fade(form);
 
   searchGlass.classList.add("navbar-toggler-right");
   bar.appendChild(searchGlass);
@@ -57,14 +58,16 @@ function hamburgerness() {
 function srchBar() {
 var hamburger = document.getElementById("toggleButton");
 var searchGlass = document.getElementById("glassy");
+var form = document.getElementById("searchForm");
 var bar = document.getElementById("navvy");
+var searchy = document.getElementById("searchBtn");
 
 if (searchGlass.classList.contains("navbar-toggler-right")) {
 bar.classList.remove("col-md-4");
 bar.classList.add("col-md-12");
 bar.classList.add("openedSesame");
 
-
+unfade(form);
 
 searchGlass.classList.remove("navbar-toggler-right");
 document.getElementById("search-end").appendChild(searchGlass);
@@ -72,5 +75,32 @@ document.getElementById("search-end").appendChild(searchGlass);
 hamburger.setAttribute("onclick", "javascript:closeSearch()");
   hamburger.setAttribute("data-toggle", "");
 }
+else {
+  searchy.click();
+}
+}
+function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 10);
+}
 
+function unfade(element) {
+var op = 0.1;  // initial opacity
+element.style.display = 'block';
+var timer = setInterval(function () {
+    if (op >= 1){
+        clearInterval(timer);
+    }
+    element.style.opacity = op;
+    element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+    op += op * 0.1;
+}, 10);
 }
