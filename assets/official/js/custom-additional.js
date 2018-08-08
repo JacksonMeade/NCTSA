@@ -38,15 +38,20 @@ function closeSearch() {
   bar.classList.remove("openedSesame");
 
 
+
   searchGlass.classList.add("navbar-toggler-right");
   bar.appendChild(searchGlass);
   bar.removeAttribute('opened');
 
+  setTimeout(function() {hamburgerness();},50);
 }
 
-$( "#closeSearcher" ).mouseup(function() {
-  $("#toggleButton").removeAttr('disabled');
-});
+
+function hamburgerness() {
+    var hamburger = document.getElementById("toggleButton");
+    hamburger.removeAttribute("onclick");
+    hamburger.setAttribute("data-toggle", "collapse");
+};
 
 
 function srchBar() {
@@ -59,10 +64,13 @@ bar.classList.remove("col-md-4");
 bar.classList.add("col-md-12");
 bar.classList.add("openedSesame");
 
-hamburger.disabled=true;
+
 
 searchGlass.classList.remove("navbar-toggler-right");
 document.getElementById("search-end").appendChild(searchGlass);
+
+hamburger.setAttribute("onclick", "javascript:closeSearch()");
+  hamburger.setAttribute("data-toggle", "");
 }
 
 }
