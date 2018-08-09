@@ -1,2 +1,5 @@
-
-~$Mockups.pptx
+node_modules
+*.log
+.DS_Store
+dist
+!demo/dist/
