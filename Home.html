@@ -87,19 +87,7 @@
 <div class="justify-content-center" style="">
           <!--NCTSA SVG-->
           <svg class="brightglow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143.3 29.8">
-                          <defs xmlns="http://www.w3.org/2000/svg">
-<filter id="dropshadow" height="130%">
-<feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
-<feOffset dx="2" dy="2" result="offsetblur"/>
-<feComponentTransfer>
-<feFuncA type="linear" slope="0.2"/>
-</feComponentTransfer>
-<feMerge>
-<feMergeNode/>
-<feMergeNode in="SourceGraphic"/>
-</feMerge>
-</filter>
-</defs>
+
           							  <g>
           							    <path d="M277.6,235.2h24.7l.7.3a9.3,9.3,0,0,1,7,5.5c3.7,7.5,7.6,15,11.4,22.4l.4,1.1h-27c.9-2.4,1.7-4.7,2.7-7a1.4,1.4,0,0,1,1.1-.6h6.7c1.5,0,1.7-.3,1-1.6l-5.8-10.9a4.5,4.5,0,0,0-4.2-2.6h-35a4,4,0,0,0-4.2,2.9l-7.5,18.8a1.5,1.5,0,0,1-1.7,1.1H237.1l.5-1.4,5.4-12.8c.7-1.7,1.4-3.3,2-5s-.4-3.3-2.3-3.5H215.2a1.8,1.8,0,0,0-2,1.4l-8.3,20.3a1.3,1.3,0,0,1-1.5,1h-6.5a1.3,1.3,0,0,1-1.5-1c-.9-2.5-1.9-4.9-2.8-7.4l-.6-1.4-.7,1.4-3.4,7.4c-.2.3-.5.8-.8.8h-8.6a4.9,4.9,0,0,1,.1-.6l10-27.6a1.4,1.4,0,0,1,1-.7h3.8a1.3,1.3,0,0,1,1.4.9l4.6,10.3.7,1.3.6-1.3c1.4-3.3,2.9-6.7,4.2-10.1a1.6,1.6,0,0,1,1.8-1.1H276Z" transform="translate(-178.6 -235.2)"></path>
           							    <path d="M215.4,265l-2.4-.3c-1.8-.1-2.4-.9-1.6-2.6,2.2-5.2,4.5-10.2,6.5-15.5.9-2.5,2.2-3.3,4.7-3a36.9,36.9,0,0,0,4.7,0l-.5,1.3-4.6,10.8c-.3.7-.8,1.6.3,2.2a2.9,2.9,0,0,0,3.1-.5l.2-.3c.6-1.9,2-2,3.6-1.9s4,0,6.1,0c-1.1,2.5-2.1,4.8-3,7.1a4.4,4.4,0,0,1-2.1,2.7Z" transform="translate(-178.6 -235.2)"></path>
@@ -139,7 +127,7 @@
   <div class="row">
     <div class="col-md-6 sm-hide" style="padding-top: 3rem;">
     <div class="custom-arrow hidden-sm-down" aria-hidden="true">
-        <a href="#next">
+        <a href="" onclick="scrollToText">
             <i class="customi-down custom-iconfont"></i>
         </a>
     </div>
@@ -174,115 +162,38 @@
 </section>
 
 
-<div class="grid">
-  <div class="item blog">
-    <div class="title">
-      <h3>1: Blog Post</h3>
-    </div>
-    <div class="desc">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam, mattis nibh ut, faucibus leo. Sed lectus libero, volutpat at eros quis, venenatis tempus neque. Nulla vel faucibus orci, nec convallis ligula. Quisque maximus gravida orci, in lacinia mauris pretium nec. Sed et enim bibendum, fermentum tellus eu, eleifend ex. Aliquam lectus magna, sollicitudin vitae placerat ac, semper ut risus. Nunc vestibulum lacus et nulla volutpat auctor.</p>
-    </div>
-  </div>
-  <div class="item photo">
-    <div class="title">
-      <h3>2: Photo</h3>
-    </div>
-    <img class="photothumb" src="https://www.andybarefoot.com/codepen/images/dogs/dog1.jpg">
-    <div class="desc">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam, mattis nibh ut, faucibus leo. Sed lectus libero, volutpat at eros quis, venenatis tempus neque. Nulla vel .</p>
+<section class="grid" id="next" >
+  <div class="item --white" hspan="2" vspan="2">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 title">
+              <h3>First Figure</h3>
+          </div>
+      </div>
     </div>
   </div>
-  <div class="item photo">
-    <div class="title">
-      <h3>3: Photo</h3>
-    </div>
-    <img class="photothumb" src="https://www.andybarefoot.com/codepen/images/dogs/dog2.jpg">
-    <div class="desc">
-      <p>Lorem ipsum dolor sit amet, conse</p>
+  <div class="item  --blue" hspan="1" vspan="2">
+    <div class="container">
+      <div class="row">
+
+      </div>
     </div>
   </div>
-  <div class="item project">
-    <div class="title">
-      <h3>4: Project</h3>
-    </div>
-    <div class="desc">
-      <img src="https://www.andybarefoot.com/codepen/images/dogs/dog3.jpg">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam, mattis nibh ut, faucibus leo. Sed lectus libero, volutpat at eros quis, venenatis tempus neque. Nulla vel faucibus orci, nec convallis ligula. Quisque maximus gravida orci, in lacinia mauris pretium nec. Sed et enim bibendum, fermentum tellus eu, eleifend ex. Aliquam lectus magna, sollicitudin vitae placerat ac, semper ut risus. Nunc vestibulum lacus et nulla volutpat auctor.</p>
+  <div class="item --white" hspan="1" vspan="2">
+    <div class="container">
+      <div class="row">
+
+      </div>
     </div>
   </div>
-  <div class="item project">
-    <div class="title">
-      <h3>5: Project</h3>
-    </div>
-    <div class="desc">
-      <img src="https://www.andybarefoot.com/codepen/images/dogs/dog4.jpg">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem, nec convallis ligula. Quisque maximus </p>
+  <div class="item --grey" hspan="2" vspan="3">
+    <div class="container">
+      <div class="row">
+
+      </div>
     </div>
   </div>
-  <div class="item blog">
-    <div class="title">
-      <h3>6: Blog Post</h3>
-    </div>
-    <div class="desc">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam, mattis nibh ut, faucibus leo. Sed lectus libero, volutpat at eros quis, venenatis tempus neque. Nulla vel faucibus orci, nec convallis ligula. Quisque maximus gravida orci, in lacinia mauris pretium nec. Sed et enim bibendum, fermentum tellus eu, eleifend ex. Aliquam lectus magna, sollicitudin vitae placerat ac, semper ut risus. Nunc vestibulum lacus et nulla volutpat auctor.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam, mattis nibh</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam, mattis nibh</p>
-    </div>
-  </div>
-  <div class="item project">
-    <div class="title">
-      <h3>7: Project</h3>
-    </div>
-    <div class="desc">
-      <img src="https://www.andybarefoot.com/codepen/images/dogs/dog5.jpg">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam, mattis nibh ut, faucibus leo. Sed lectus libero, volutpat at eros quis, venenatis tempus neque. Nulla vel faucibus orci, nec convallis ligula. Quisque maximus gravida orci, in lacinia mauris pretium nec. Sed et enim bibendum, fermentum tellus eu, eleifend ex. Aliquam lectus magna, sollicitudin vitae placerat ac, semper ut risus. Nunc vestibulum lacus et nulla volutpat auctor.</p>
-    </div>
-  </div>
-  <div class="item blog">
-    <div class="title">
-      <h3>8: Blog Post</h3>
-    </div>
-    <div class="desc">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Semper ut risus. </p>
-    </div>
-  </div>
-  <div class="item photo">
-    <div class="title">
-      <h3>9: Photo</h3>
-    </div>
-    <img class="photothumb" src="https://www.andybarefoot.com/codepen/images/dogs/dog2.jpg">
-    <div class="desc">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis</p>
-    </div>
-  </div>
-  <div class="item blog">
-    <div class="title">
-      <h3>10: Blog Post</h3>
-    </div>
-    <div class="desc">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam, mattis nibh ut, faucibus leo. Sed lectus libero, volutpat at eros quis, venenatis tempus neque. Nulla vel faucibus orci, nec convallis ligula. Quisque maximus gravida orci, in lacinia mauris pretium nec. Sed et enim bibendum, fermentum tellus eu, eleifend ex. Aliquam lectus magna, sollicitudin vitae placerat ac, semper ut risus. </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam, mattis nibh ut, faucibus leo. Sed lectus libero, volutpat at eros quis, venenatis tempus neque. Nulla vel faucibus orci, nec convallis ligula. Quisque maximus gravida orci, in lacinia mauris pretium nec. Sed et enim bibendum, fermentum tellus eu, eleifend ex. Aliquam lectus magna, sollicitudin vitae placerat ac, semper ut risus. </p>
-    </div>
-  </div>
-  <div class="item photo">
-    <div class="title">
-      <h3>11: Photo</h3>
-    </div>
-    <img class="photothumb" src="https://www.andybarefoot.com/codepen/images/dogs/dog9.jpg">
-    <div class="desc">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam,</p>
-    </div>
-  </div>
-  <div class="item project">
-    <div class="title">
-      <h3>12: Project</h3>
-    </div>
-    <div class="desc">
-      <img src="https://www.andybarefoot.com/codepen/images/dogs/dog10.jpg">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis fringilla laoreet. Mauris mattis enim ut felis consectetur, vitae lacinia enim auctor. Aenean vitae fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum non orci ut dignissim. Fusce fermentum felis aliquam,</p>
-    </div>
-  </div>
-</div>
+</section>
 
 <script src="assets/masonry/masonry.pkgd.min.js"></script>
 <script src="assets/web/assets/jquery/jquery.min.js"></script>

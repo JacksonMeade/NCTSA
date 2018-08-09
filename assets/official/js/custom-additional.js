@@ -47,6 +47,13 @@ function closeSearch() {
   setTimeout(function() {hamburgerness();},50);
 }
 
+// Scroll certain amounts from current position
+window.scrollBy({
+  top: window.innerHeight, // could be negative value
+  left: 0,
+  behavior: 'smooth'
+});
+
 
 function hamburgerness() {
     var hamburger = document.getElementById("toggleButton");
