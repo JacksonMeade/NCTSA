@@ -54,15 +54,19 @@ function hamburgerness() {
     hamburger.setAttribute("data-toggle", "collapse");
 };
 
-
 function srchBar() {
 var hamburger = document.getElementById("toggleButton");
 var searchGlass = document.getElementById("glassy");
 var form = document.getElementById("searchForm");
 var bar = document.getElementById("navvy");
 var searchy = document.getElementById("searchBtn");
+var navbarCollapse = document.getElementById("navbarSupportedContent");
 
 if (searchGlass.classList.contains("navbar-toggler-right")) {
+
+if (navbarCollapse.classList.contains("show")) {
+hamburger.click();
+}
 bar.classList.remove("col-md-4");
 bar.classList.add("col-md-12");
 bar.classList.add("openedSesame");
