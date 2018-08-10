@@ -1,3 +1,16 @@
+
+doElsCollide = function(el1, el2) {
+    el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
+    el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
+    el2.offsetBottom = el2.offsetTop + el2.offsetHeight;
+    el2.offsetRight = el2.offsetLeft + el2.offsetWidth;
+
+    return !((el1.offsetBottom < el2.offsetTop) ||
+             (el1.offsetTop > el2.offsetBottom) ||
+             (el1.offsetRight < el2.offsetLeft) ||
+             (el1.offsetLeft > el2.offsetRight))
+};
+
 function wipe_up (elem, height, color) {
         elem.css('background', color);
         elem.css('height', '0px');
@@ -7,6 +20,15 @@ function wipe_up (elem, height, color) {
             top: '0px'
         }, 500, function(){finishOff(color)});
     }
+    function wipe_down (elem, height, color) {
+            elem.css('background', color);
+            elem.css('height', '0px');
+            elem.css("bottom", height);
+            elem.animate({
+                height: height,
+                top: '0px'
+            }, 500, function(){finishOff(color)});
+        }
 
     function finishOff(colorChoice) {
     $('#navground-colorizer').css('background', colorChoice);
@@ -20,10 +42,10 @@ function visit(linkName) {
 // When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
 window.onscroll = function() {scrollFunction()};
 
+
 function scrollFunction() {
 if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
   document.getElementById("navvy").style.top = "0";
-  wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), '#052768');
 } else {
   document.getElementById("navvy").style.top = "-9rem";
 }
@@ -32,7 +54,7 @@ if (document.body.scrollTop > window.innerHeight || document.documentElement.scr
 
 $(document).ready(function () {
     var $horizontal = $('#horizontalScroll');
-
+var lastScrollTop= 0;
     $(window).scroll(function () {
         /*var s = $(this).scrollTop(),
             d = $(document).height(),
@@ -47,6 +69,33 @@ $(document).ready(function () {
             var s = $(this).scrollTop(),
             h = $(this).height(),
             w = $(this).width();
+
+            var st = $(this).scrollTop();
+              var redNavs = document.getElementsByClassName("redNav");
+              for (var i=0; i<redNavs.length; i++) {
+                if (doElsCollide(redNavs[i], document.getElementById("navvy")) && document.getElementById('navground-colorizer').style.background != "rgb(104,0,0)") {
+                  if (st > lastScrollTop) {
+                      wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), 'rgb(104,0,0)');
+                  }
+                  else {
+                      wipe_down($('#navground-changer'), $('#navground-colorizer').css('height'), 'rgb(104,0,0)');
+                  }
+                          console.log('called red');
+                }
+              }
+              var blueNavs = document.getElementsByClassName("blueNav");
+              for (var j=0; j<blueNavs.length; j++) {
+                if (doElsCollide(blueNavs[j], document.getElementById("navvy")) && document.getElementById('navground-colorizer').style.background != "#052768") {
+                  if (st > lastScrollTop) {
+                      wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), '#052768');
+                  }
+                  else {
+                      wipe_down($('#navground-changer'), $('#navground-colorizer').css('height'), '#052768');
+                  }
+                          console.log('called blue');
+                }
+              }
+                lastScrollTop = st;
 
             var c = (s/h);
             var position = 0;
@@ -160,3 +209,5 @@ var timer = setInterval(function () {
     op += op * 0.1;
 }, 10);
 }
+
+scrollFunction();
