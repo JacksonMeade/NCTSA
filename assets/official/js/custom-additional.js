@@ -1,4 +1,16 @@
+function wipe_up (elem, height, color) {
+        elem.css('background', color);
+        elem.css('height', '0px');
+        elem.css("top", height);
+        elem.animate({
+            height: height,
+            top: '0px'
+        }, 500, function(){finishOff(color)});
+    }
 
+    function finishOff(colorChoice) {
+    $('#navground-colorizer').css('background', colorChoice);
+    }
 
 function visit(linkName) {
   window.open(linkName, '_self');
@@ -11,6 +23,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
   document.getElementById("navvy").style.top = "0";
+  wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), '#052768');
 } else {
   document.getElementById("navvy").style.top = "-9rem";
 }
