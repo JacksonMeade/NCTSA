@@ -35,7 +35,7 @@ $(document).ready(function () {
             h = $(this).height(),
             w = $(this).width();
 
-            var c = Math.round(s/h);
+            var c = (s/h);
 
             var position = c * (w/2);
 
