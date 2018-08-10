@@ -74,10 +74,7 @@
               <span class="customi-search custom-iconfont custom-iconfont-btn"></span></div>
       </nav>
   </section>
-
-  <section class="custom-id custom-fullscreen" id="Main" style="margin-top: -1px;">
-
-
+  <section class="custom-id custom-fullscreen snap" id="Main" style="margin-top: -1px;">
 
     <div style="opacity: 1.0;" class="RWBGradient"></div>
     <div class="custom-overlay" style="opacity:0.3;"></div>
@@ -166,17 +163,17 @@
 
 <section id="next">
   <div class="vertical content">
-    <div class="item-row redNav" name="1">
+    <div class="item-row red snap" name="1">
       <div class="item col-md-6 col-sm-12">
         <h1 class="display-1" style="padding: 10rem;">Item 1</h1>
       </div>
     </div>
-    <div class="item-row blueNav" name="2">
+    <div class="item-row blue snap" name="2">
       <div class="item col-md-6 col-sm-12">
           <h1 class="display-1" style="padding: 10rem;">Item 2</h1>
       </div>
     </div>
-    <div class="item-row redNav" name="3">
+    <div class="item-row red snap" name="3">
       <div class="item col-md-6 col-sm-12">
           <h1 class="display-1" style="padding: 10rem;">Item 3</h1>
       </div>
@@ -221,7 +218,20 @@
 <script src="assets/official/js/custom-additional.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+<script src="assets/scrollsnap/easing/jquery-easing.js"></script>
+<script src="assets/scrollsnap/scrollstop/jquery-scrollstop.js"></script>
+<script src="assets/scrollsnap/scrollsnap.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).scrollsnap({
+        snaps: '.snap',
+        proximity: 700,
+        latency: 50,
+        duration: 400,
+        easing: 'swing'
+    });
+});
+</script>
 
 
 </body>
