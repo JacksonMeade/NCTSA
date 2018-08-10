@@ -1,3 +1,5 @@
+
+
 function visit(linkName) {
   window.open(linkName, '_self');
 }
@@ -12,7 +14,25 @@ if (document.body.scrollTop > window.innerHeight || document.documentElement.scr
 } else {
   document.getElementById("navvy").style.top = "-9rem";
 }
+
 }
+
+$(document).ready(function () {
+    var $horizontal = $('#horizontalScroll');
+
+    $(window).scroll(function () {
+        var s = $(this).scrollTop(),
+            d = $(document).height(),
+            c = $(this).height();
+
+        scrollPercent = (s / (d - c));
+
+        var position = (scrollPercent * ($(document).width()/1.5 - $horizontal.width()/1.5));
+        $horizontal.css({
+            'left': -position
+        });
+    });
+});
 
 function bkgd(link) {
 if (link == "Default") {
@@ -47,12 +67,6 @@ function closeSearch() {
   setTimeout(function() {hamburgerness();},50);
 }
 
-// Scroll certain amounts from current position
-window.scrollBy({
-  top: window.innerHeight, // could be negative value
-  left: 0,
-  behavior: 'smooth'
-});
 
 
 function hamburgerness() {

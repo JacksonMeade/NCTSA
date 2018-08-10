@@ -4,127 +4,37 @@
   width: 100%;
   max-width:100%;
   z-index: 4;
-  scroll-snap-points-y: repeat(100%);
-    scroll-snap-type: mandatory;
-    scroll-snap-desination: 100% 0%;
+
 }
+
+.horizontal {
+  position: absolute;
+  width: 100%;
+}
+
+.item-row {
+  z-index: 5;
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+
+}
+
+.horizontal > .item {
+
+}
+.item {
+      background:white;
+      z-index: -1;
+      height: 100vh;
+    }
+
 
 .content, .double-item-overlay {
   position: absolute;
   top:0;
   left:0;
-}
-
-.double-item-overlay {
-  width: 100%;
-  height: 100vh;
-}
-
-.horizontal {
-  width: 100%;
-  max-width:100%;
-  z-index: 2;
-}
-
-.item-row {
-  display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.content > .item-row > .item {
-  height: 100vh;
-  padding:0px;
-}
-
-.vertical > .item-row > .item {
-  background:white;
-}
-
-@media(max-width: 798px) {
-.content > .item-row > .item, .double-item-overlay {
-  height:50vh;
-}
-  .grid  {
-       grid-template-columns: repeat(auto-fill, minmax(100vw,2fr));
-  }
-}
-
-@media (min-width: 798px) {
-  .grid  {
-       grid-template-columns: repeat(auto-fill, minmax(40vw,4fr));
-  }
-}
-@media (min-width: 1500px) {
-  .grid {
-     grid-template-columns: repeat(auto-fill, minmax(30vw,6fr));
-  }
-}
-.grid {
-   display: grid;
-   grid-gap: 0px;
-   grid-auto-rows: 200px;
-}
-
-.item[hspan = "1"] {
-  grid-column-end: span 1;
-}
-.item[hspan = "2"] {
-  grid-column-end: span 2;
-}
-.item[hspan = "3"] {
-  grid-column-end: span 3;
-}
-.item[hspan = "4"] {
-  grid-column-end: span 4;
-}
-
-.item[vspan = "1"] {
-  grid-row-end: span 1;
-}
-.item[vspan = "2"] {
-  grid-row-end: span 2;
-}
-.item[vspan = "3"] {
-  grid-row-end: span 3;
-}
-.item[vspan = "4"] {
-  grid-row-end: span 4;
-}
-
-
-.item {
-  /*background-color: #ffffff;*/
-}
-
-.photothumb{
-  width: 100%;
-}
-
-.title {
-  padding: 2rem;
- }
-
-.title h3{
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  font-family: 'Farray';
-}
-
-.desc{
-  padding: 10px 10px 5px 10px;
-}
-
-.desc img{
-  width: 50%;
-  margin: 0 10px 10px 0;
-  float: left;
-}
-
-.desc p{
-  margin-bottom: 10px;
 }
 
 .--red {

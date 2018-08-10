@@ -127,7 +127,7 @@
   <div class="row">
     <div class="col-md-6 sm-hide" style="padding-top: 3rem;">
     <div class="custom-arrow hidden-sm-down" aria-hidden="true">
-        <a href="" onclick="scrollToText">
+        <a href="" onclick="javascript:window.scrollBy({top:window.innerHeight,left: 0,behavior:'smooth'});">
             <i class="customi-down custom-iconfont"></i>
         </a>
     </div>
@@ -163,41 +163,44 @@
 
 
 <section id="next">
-
   <div class="vertical content">
-    <div class="item-row">
-      <div class="double-item-overlay"></div>
-      <div class="page item col-md-6 col-sm-12">
+    <div class="item-row" style="background-color:rgba(188,188,188,0.45);">
+      <div class="item col-md-6 col-sm-12">
         Hi
       </div>
     </div>
-    <div class="item-row">
-      <div class="page item col-md-6 col-sm-12">
+    <div class="item-row" style="background-color:rgba(0,0,45,0.55);">
+      <div class="item col-md-6 col-sm-12">
         Hi
       </div>
+    </div>
     </div>
   </div>
-  <div class="horizontal content">
+  <div class="horizontal content" id="horizontalScroll">
     <div class="item-row">
-      <div class="item col-md-6 col-sm-12">
+      <div class="item col-md-6">
         World
       </div>
-      <div class="item col-md-6 col-sm-12">
+      <div class="item col-md-6" style="background-image: url('assets/images/tsaTeam.jpg'); background-repeat: no-repeat;   background-size: cover;">
         World
       </div>
-    </div>
-    <div class="item-row">
-      <div class="item col-md-6 col-sm-12">
+      <div class="item col-md-6" style="background:black;">
         World
       </div>
-      <div class="item col-md-6 col-sm-12">
+      <div class="item col-md-6">
         World
       </div>
+      <div class="item col-md-6">
+        World
+      </div>
+      <div class="item col-md-6">
+        World
+      </div>
+
   </div>
   </div>
 </section>
 
-<script src="assets/scrollsnap/scrollsnap.js"></script>
 <script src="assets/masonry/masonry.pkgd.min.js"></script>
 <script src="assets/web/assets/jquery/jquery.min.js"></script>
 <script src="assets/popper/popper.min.js"></script>
