@@ -1,4 +1,6 @@
-
+body {
+  overflow-x: hidden;
+}
 
 .vertical {
   width: 100%;
@@ -7,10 +9,6 @@
 
 }
 
-.horizontal {
-  position: absolute;
-  width: 100%;
-}
 
 .item-row {
   z-index: 5;
@@ -22,7 +20,6 @@
 }
 
 .horizontal > .item {
-
 }
 .item {
       background:white;
@@ -35,6 +32,15 @@
   position: absolute;
   top:0;
   left:0;
+}
+
+.horizontal {
+  position: fixed;
+  z-index: -3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.6s ease-in-out;
 }
 
 .--red {

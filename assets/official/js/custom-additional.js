@@ -21,15 +21,27 @@ $(document).ready(function () {
     var $horizontal = $('#horizontalScroll');
 
     $(window).scroll(function () {
-        var s = $(this).scrollTop(),
+        /*var s = $(this).scrollTop(),
             d = $(document).height(),
             c = $(this).height();
 
         scrollPercent = (s / (d - c));
 
-        var position = (scrollPercent * ($(document).width()/1.5 - $horizontal.width()/1.5));
+        var position = (scrollPercent * ($(document).width()/2 - $horizontal.width()/2));
         $horizontal.css({
-            'left': -position
+            'left': -position*/
+
+            var s = $(this).scrollTop(),
+            h = $(this).height(),
+            w = $(this).width();
+
+            var c = Math.round(s/h);
+
+            var position = c * (w/2);
+
+            console.log("s is " + s + ", h is " + h + ", w is " + w + ", c is " + c + ", and position is " + position + ".")
+            $horizontal.css({
+              'left': -position
         });
     });
 });
