@@ -17,21 +17,53 @@ body {
 
 }
 
-.red {
-  background: rgba(0,0,140,0.3);
+.red, .red-inverted {
+  background: rgba(104,0,0,0.3);
 }
 .red > .item {
-    background: rgba(0,0,140,1);
+    background:white;
+    color:rgb(104,0,0);
+}
+.red-inverted > .item {
     color:white;
+    background:rgb(104,0,0);
 }
 
 
-.blue {
-  background: rgba(140,0,0,0.3);
+.blue, .blue-inverted {
+  background: rgba(5,39,104,0.3);
 }
 .blue > .item {
-    background: rgba(140,0,0,1);
-    color:white;
+    color: rgba(5,39,104,1);
+    background:white;
+}
+.blue-inverted > .item {
+  background: rgba(5,39,104,1);
+  color:white;
+}
+
+.grey, .grey-inverted {
+  background: rgba(128,128,128,0.3);
+}
+.grey > .item {
+    color: rgba(128,128,128,1);
+    background:white;
+}
+.grey-inverted > .item {
+  background: rgba(128,128,128,1);
+  color:white;
+}
+
+.white, .white-inverted {
+  background: rgba(255,255,255,0.3);
+}
+.white > .item {
+  background: rgba(255,255,255,1);
+  color:black;
+}
+.white-inverted > .item {
+  color: rgba(255,255,255,1);
+  background:black;
 }
 
 .item * {

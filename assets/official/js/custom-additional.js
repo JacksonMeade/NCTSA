@@ -24,6 +24,7 @@ function wipe_up (elem, height, color) {
     $('.section_4 .navbar-toggleable-sm').removeClass('red');
     $('.section_4 .navbar-toggleable-sm').removeClass('grey');
     $('.section_4 .navbar-toggleable-sm').removeClass('black');
+    $('.section_4 .navbar-toggleable-sm').removeClass('white');
       switch (colorChoice) {
         case ('#052768'):
               $('.section_4 .navbar-toggleable-sm').addClass('blue');
@@ -34,8 +35,11 @@ function wipe_up (elem, height, color) {
         case ('rgb(128,128,128)'):
               $('.section_4 .navbar-toggleable-sm').addClass('grey')
         break;
-        case ('rgb(13,13,13,1)'):
+        case ('rgb(13,13,13)'):
               $('.section_4 .navbar-toggleable-sm').addClass('black');
+        break;
+        case ('rgb(255,255,255)'):
+              $('.section_4 .navbar-toggleable-sm').addClass('white');
         break;
       }
     }
@@ -76,6 +80,9 @@ var colorVals = ['default'];
       if ($(this).hasClass('nav-black')) {
         colorVals.push('rgb(13,13,13)');
       }
+      if ($(this).hasClass('nav-white')) {
+        colorVals.push('rgb(255,255,255)');
+      }
     });
     console.log(colorVals);
     $(window).scroll(function () {
@@ -108,6 +115,12 @@ var colorVals = ['default'];
             if (scrollDist != d) {
               scrollDist = d;
               if (colorVals[scrollDist] != undefined) {
+                if (colorVals[scrollDist] == 'rgb(255,255,255)') {
+                  $('#glassy').addClass('blackGlass');
+                }
+                else {
+                  $('#glassy').removeClass('blackGlass');
+                }
               if (st == 0) {
                 wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), colorVals[scrollDist]);
               }

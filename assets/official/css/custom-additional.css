@@ -2571,7 +2571,12 @@ body {
 #glassy {
   transition: all 0.5s ease-in-out;
 }
-
+#glassy span {
+  -moz-transition-delay: 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+  transition: all 0.8s;
+}
 @media (min-width: 798px) {
 .section_4 .navbar-toggleable-sm.opened:after {
   position: absolute;
@@ -2596,6 +2601,27 @@ body {
 }
 .section_4 .navbar-toggleable-sm.grey.opened:after {
   background-color:rgb(128,128,128);
+}
+.section_4 .navbar-toggleable-sm.white.opened:after {
+  background-color:rgb(255,255,255);
+}
+.section_4 .navbar-toggleable-sm > .navbar-toggler > .hamburger > span {
+  background-color:white;
+}
+.section_4 .navbar-toggleable-sm.white > .navbar-toggler > .hamburger > span {
+  background-color:black;
+}
+
+.section_4 .navbar-toggleable-sm > .menu-logo > .navbar-brand > .navbar-logo > a > img {
+
+}
+.section_4 .navbar-toggleable-sm.white > .menu-logo > .navbar-brand > .navbar-logo > a > img {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.blackGlass span {
+  color: black;
 }
 
 }
