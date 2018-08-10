@@ -36,8 +36,14 @@ $(document).ready(function () {
             w = $(this).width();
 
             var c = (s/h);
+            var position = 0;
 
-            var position = c * (w/2);
+            if (w <= 798) {
+            position = (c * w) - c;
+            }
+            else {
+            position = c * (w/2);
+            }
 
             console.log("s is " + s + ", h is " + h + ", w is " + w + ", c is " + c + ", and position is " + position + ".")
             $horizontal.css({

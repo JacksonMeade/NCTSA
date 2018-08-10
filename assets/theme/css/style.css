@@ -5,13 +5,11 @@ body {
 .vertical {
   width: 100%;
   max-width:100%;
-  z-index: 4;
 
+  z-index: 1;
 }
 
-
 .item-row {
-  z-index: 5;
   display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -19,13 +17,16 @@ body {
 
 }
 
-.horizontal > .item {
+.item * {
+  z-index: 1;
 }
+
 .item {
       background:white;
-      z-index: -1;
+      background-repeat: no-repeat;
+      background-size: cover;
       height: 100vh;
-    }
+}
 
 
 .content, .double-item-overlay {
@@ -36,12 +37,35 @@ body {
 
 .horizontal {
   position: fixed;
-  z-index: -3;
+  z-index: -300;
   top: 0;
   left: 0;
   width: 100%;
 }
 
+.horizontal > .item-row > .first {
+  margin-left: 100%;
+}
+@media (max-width: 798px) {
+  .horizontal {
+    position: fixed;
+    z-index: -300;
+    top: 50vh;
+    left: 0;
+    height: 50vh;
+  }
+  .vertical > .item-row {
+    padding-bottom: 50vh;
+  }
+  .item {
+    height: 50vh;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+}
 .--red {
  background: rgb(104,0,0);
  color: white;
