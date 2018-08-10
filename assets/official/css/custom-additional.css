@@ -2578,7 +2578,6 @@ body {
   width: 100%;
   height: 100vh;
   content: '';
-  background-color: #052768;
   left: 0;
   bottom: 0;
   transition: all 0.5s ease-in-out;
@@ -2586,6 +2585,19 @@ body {
   -webkit-transform: translateY(100%);
   z-index: 1000;
 }
+.section_4 .navbar-toggleable-sm.red.opened:after {
+  background-color:rgb(104,0,0);
+}
+.section_4 .navbar-toggleable-sm.blue.opened:after {
+  background-color: #052768;
+}
+.section_4 .navbar-toggleable-sm.black.opened:after {
+  background-color:rgb(13,13,13);
+}
+.section_4 .navbar-toggleable-sm.grey.opened:after {
+  background-color:rgb(128,128,128);
+}
+
 }
 .section_4 .navbar.navbar-short {
   min-height: 60px;

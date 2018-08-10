@@ -17,19 +17,19 @@ body {
 
 }
 
-.redNav {
+.red {
   background: rgba(0,0,140,0.3);
 }
-.redNav > .item {
+.red > .item {
     background: rgba(0,0,140,1);
     color:white;
 }
 
 
-.blueNav {
+.blue {
   background: rgba(140,0,0,0.3);
 }
-.blueNav > .item {
+.blue > .item {
     background: rgba(140,0,0,1);
     color:white;
 }

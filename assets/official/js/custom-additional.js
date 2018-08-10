@@ -20,6 +20,24 @@ function wipe_up (elem, height, color) {
 
     function finishOff(colorChoice) {
     $('#navground-colorizer').css('background', colorChoice);
+    $('.section_4 .navbar-toggleable-sm').removeClass('blue');
+    $('.section_4 .navbar-toggleable-sm').removeClass('red');
+    $('.section_4 .navbar-toggleable-sm').removeClass('grey');
+    $('.section_4 .navbar-toggleable-sm').removeClass('black');
+      switch (colorChoice) {
+        case ('#052768'):
+              $('.section_4 .navbar-toggleable-sm').addClass('blue');
+        break;
+        case ('rgb(104,0,0)'):
+              $('.section_4 .navbar-toggleable-sm').addClass('red');
+        break;
+        case ('rgb(128,128,128)'):
+              $('.section_4 .navbar-toggleable-sm').addClass('grey')
+        break;
+        case ('rgb(13,13,13,1)'):
+              $('.section_4 .navbar-toggleable-sm').addClass('black');
+        break;
+      }
     }
 
 function visit(linkName) {
@@ -44,7 +62,22 @@ $(document).ready(function () {
     var $horizontal = $('#horizontalScroll');
 var lastScrollTop= 0;
 var scrollDist = 0;
-var colorVals = ['rgb(104,0,0)','#052768','rgb(104,0,0)','#052768','rgb(104,0,0)','#052768'];
+var colorVals = ['default'];
+    $('.vertical > .item-row').each(function() {
+      if ($(this).hasClass('nav-red')) {
+        colorVals.push('rgb(104,0,0)');
+      }
+      else if ($(this).hasClass('nav-blue')) {
+        colorVals.push('#052768');
+      }
+      else if ($(this).hasClass('nav-grey')) {
+        colorVals.push('rgb(128,128,128)');
+      }
+      if ($(this).hasClass('nav-black')) {
+        colorVals.push('rgb(13,13,13)');
+      }
+    });
+    console.log(colorVals);
     $(window).scroll(function () {
         /*var s = $(this).scrollTop(),
             d = $(document).height(),
@@ -56,6 +89,12 @@ var colorVals = ['rgb(104,0,0)','#052768','rgb(104,0,0)','#052768','rgb(104,0,0)
         $horizontal.css({
             'left': -position*/
 
+
+            if (document.getElementById("navbarSupportedContent").classList.contains("show")) {
+            document.getElementById('toggleButton').click();
+            $('navground-changer').css('height', '0px');
+            }
+
             var s = $(this).scrollTop(),
             h = $(this).height(),
             w = $(this).width();
@@ -65,7 +104,7 @@ var colorVals = ['rgb(104,0,0)','#052768','rgb(104,0,0)','#052768','rgb(104,0,0)
 
             var st = $(this).scrollTop();
             var d = Math.floor(c);
-            console.log(d);
+            //console.log(d);
             if (scrollDist != d) {
               scrollDist = d;
               if (colorVals[scrollDist] != undefined) {
