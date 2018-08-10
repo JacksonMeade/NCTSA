@@ -1,16 +1,3 @@
-
-doElsCollide = function(el1, el2) {
-    el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
-    el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
-    el2.offsetBottom = el2.offsetTop + el2.offsetHeight;
-    el2.offsetRight = el2.offsetLeft + el2.offsetWidth;
-
-    return !((el1.offsetBottom < el2.offsetTop) ||
-             (el1.offsetTop > el2.offsetBottom) ||
-             (el1.offsetRight < el2.offsetLeft) ||
-             (el1.offsetLeft > el2.offsetRight))
-};
-
 function wipe_up (elem, height, color) {
         elem.css('background', color);
         elem.css('height', '0px');
@@ -20,6 +7,7 @@ function wipe_up (elem, height, color) {
             top: '0px'
         }, 500, function(){finishOff(color)});
     }
+
     function wipe_down (elem, height, color) {
             elem.css('background', color);
             elem.css('height', '0px');
@@ -55,6 +43,8 @@ if (document.body.scrollTop > window.innerHeight || document.documentElement.scr
 $(document).ready(function () {
     var $horizontal = $('#horizontalScroll');
 var lastScrollTop= 0;
+var scrollDist = 0;
+var colorVals = ['rgb(104,0,0)','#052768','rgb(104,0,0)','#052768','rgb(104,0,0)','#052768'];
     $(window).scroll(function () {
         /*var s = $(this).scrollTop(),
             d = $(document).height(),
@@ -70,35 +60,38 @@ var lastScrollTop= 0;
             h = $(this).height(),
             w = $(this).width();
 
-            var st = $(this).scrollTop();
-              var redNavs = document.getElementsByClassName("redNav");
-              for (var i=0; i<redNavs.length; i++) {
-                if (doElsCollide(redNavs[i], document.getElementById("navvy")) && document.getElementById('navground-colorizer').style.background != "rgb(104,0,0)") {
-                  if (st > lastScrollTop) {
-                      wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), 'rgb(104,0,0)');
-                  }
-                  else {
-                      wipe_down($('#navground-changer'), $('#navground-colorizer').css('height'), 'rgb(104,0,0)');
-                  }
-                          console.log('called red');
-                }
-              }
-              var blueNavs = document.getElementsByClassName("blueNav");
-              for (var j=0; j<blueNavs.length; j++) {
-                if (doElsCollide(blueNavs[j], document.getElementById("navvy")) && document.getElementById('navground-colorizer').style.background != "#052768") {
-                  if (st > lastScrollTop) {
-                      wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), '#052768');
-                  }
-                  else {
-                      wipe_down($('#navground-changer'), $('#navground-colorizer').css('height'), '#052768');
-                  }
-                          console.log('called blue');
-                }
-              }
-                lastScrollTop = st;
-
             var c = (s/h);
             var position = 0;
+
+            var st = $(this).scrollTop();
+            var d = Math.floor(c);
+            console.log(d);
+            if (scrollDist != d) {
+              scrollDist = d;
+              if (colorVals[scrollDist] != undefined) {
+              if (st == 0) {
+                wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), colorVals[scrollDist]);
+              }
+              else if (st > lastScrollTop) {
+                wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), colorVals[scrollDist]);
+              }
+              else {
+                wipe_down($('#navground-changer'), $('#navground-colorizer').css('height'), colorVals[scrollDist]);
+              }
+              }
+              else {
+                if (st == 0) {
+                  wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), '#052768');
+                }
+                else if (st > lastScrollTop) {
+                  wipe_up($('#navground-changer'), $('#navground-colorizer').css('height'), '#052768');
+                }
+                else {
+                  wipe_down($('#navground-changer'), $('#navground-colorizer').css('height'), '#052768');
+                }
+              }
+              lastScrollTop = st;
+            }
 
             if (w <= 798) {
             position = (c * w) - c;
@@ -107,7 +100,7 @@ var lastScrollTop= 0;
             position = c * (w/2);
             }
 
-            console.log("s is " + s + ", h is " + h + ", w is " + w + ", c is " + c + ", and position is " + position + ".")
+            //console.log("s is " + s + ", h is " + h + ", w is " + w + ", c is " + c + ", and position is " + position + ".")
             $horizontal.css({
               'left': -position
         });
