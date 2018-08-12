@@ -136,7 +136,7 @@ $(document).ready(function() {
         var position = 0;
 
         var st = $(this).scrollTop();
-        var d = Math.floor(c);
+        var d = Math.round(c);
         //console.log(d);
         if (scrollDist != d &&
             !isMobile) {

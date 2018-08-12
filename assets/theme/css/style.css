@@ -1,6 +1,20 @@
 body {
      overflow-x:hidden;
+     background:black;
 }
+
+.title {
+  font-family: 'Farray';
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.red .title_border {
+  padding-bottom: 1rem;
+  border-bottom: 0.3rem solid rgb(104,0,0);
+}
+
  .vertical {
      width: 100%;
      max-width:100%;
@@ -18,6 +32,10 @@ body {
  .red > .item {
      background:white;
      color:rgb(104,0,0);
+}
+.red > .item .invert {
+  color:white;
+  background:rgb(104,0,0);
 }
  .red-inverted > .item {
      color:white;
@@ -77,9 +95,24 @@ body {
      left: 0;
      width: 100%;
 }
+.item .full-width {
+  margin-left: -30px;
+  margin-right: -30px;
+  
+  width: auto;
+}
  .horizontal > .item-row > .first {
      margin-left: 100%;
 }
+
+.horizontal > .item-row > .first:before {
+    background: black;
+}
+
+.vertical > .item-row > .item {
+    padding-top: 77px;
+}
+
  @media (max-width: 798px) {
      .horizontal {
          position: fixed;
@@ -466,38 +499,65 @@ body {
      background: #e6e6e6;
      position:relative;
 }
- .linkList {
-     font-family: 'Montserrat-Light' !important;
-     color:rgb(51, 119, 255) !important;
-     list-style-type: none;
+.linkList {
+   width: 100%;
+   text-align: center;
+    font-family: 'Bahnschrift' !important;
+    font-stretch: semi-condensed;
+    list-style-type: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    background: rgba(13,13,13,0.1);
 }
- .linkList:before {
-     content: "\e946 ";
-     color: inherit;
-     text-decoration: ExtraBold;
-     font-size: inherit;
-     font-family: OfficialIcons !important;
-     speak: none;
-     font-style: normal;
-     font-weight: normal;
-     font-variant: normal;
-     text-transform: none;
-     line-height: 1;
-     -webkit-font-smoothing: antialiased;
+.linkList:after {
+    content: "\e946 ";
+    text-decoration: ExtraBold;
+    color: inherit;
+    text-align: right;
+    float:right;
+    margin-right: 1.5rem;
+     background: rgba(13,13,13,0.1);
+     padding: 0.2rem;
+     border-radius: 5px;
+    font-size: inherit;
+    font-family: OfficialIcons !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
 }
- .linkList:hover {
-     color:rgb(255, 204, 0) !important;
-     transition: 0.2s ease-in-out;
+.linkList:hover {
+  color:white;
+  background: rgba(128,128,128,1);
+  box-shadow: 2px 2px 2px white;
+  transform:scale(1.02);
+    transition: 0.2s ease-in-out;
 }
  .fileList {
-     font-family: 'Montserrat-Light' !important;
-     color:rgb(51, 119, 255) !important;
+    width: 100%;
+    text-align: center;
+     font-family: 'Bahnschrift' !important;
+     font-stretch: semi-condensed;
      list-style-type: none;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+     font-size: 1rem;
+     background: rgba(13,13,13,0.1);
 }
- .fileList:before {
+ .fileList:after {
      content: "\e989 ";
      text-decoration: ExtraBold;
      color: inherit;
+     text-align: right;
+     float:right;
+     margin-right: 1.5rem;
+      background: rgba(13,13,13,0.1);
+      padding: 0.2rem;
+      border-radius: 5px;
      font-size: inherit;
      font-family: OfficialIcons !important;
      speak: none;
@@ -509,7 +569,10 @@ body {
      -webkit-font-smoothing: antialiased;
 }
  .fileList:hover {
-     color:rgb(255, 204, 0) !important;
+   color:white;
+   background: rgba(128,128,128,1);
+   box-shadow: 2px 2px 2px white;
+   transform:scale(1.02);
      transition: 0.2s ease-in-out;
 }
  @media(min-width:768px) {
