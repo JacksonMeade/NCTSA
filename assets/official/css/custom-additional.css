@@ -180,6 +180,110 @@ body {
   background-color: #000f55 !important;
   border-color: #000f55 !important;
 }
+.cid-r3QLMLl5AB {
+  padding-top: 75px;
+  padding-bottom: 15px;
+  background-color: #993434;
+}
+.cid-r3QLMLl5AB .title {
+  margin-bottom: 2rem;
+}
+.cid-r3QLMLl5AB .custom-section-subtitle {
+  color: #ffffff;
+}
+.cid-r3QLMLl5AB a:not([href]):not([tabindex]) {
+  color: #fff;
+  border-radius: 3px;
+}
+.cid-r3QLMLl5AB a.btn-white:not([href]):not([tabindex]) {
+  color: #333;
+}
+.cid-r3QLMLl5AB .multi-horizontal {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  max-width: 100%;
+}
+.cid-r3QLcFwU88 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #2e2e2e;
+}
+.cid-r3QLcFwU88 .row-links {
+  width: 100%;
+  justify-content: center;
+}
+.cid-r3QLcFwU88 .social-row {
+  width: 100%;
+  justify-content: center;
+}
+.cid-r3QLcFwU88 .media-container-row {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cid-r3QLcFwU88 .media-container-row .foot-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 0;
+}
+.cid-r3QLcFwU88 .media-container-row .foot-menu li {
+  padding: 0 1rem 1rem 1rem;
+}
+.cid-r3QLcFwU88 .media-container-row .foot-menu li p {
+  margin: 0;
+}
+.cid-r3QLcFwU88 .media-container-row .social-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+.cid-r3QLcFwU88 .media-container-row .social-list .custom-iconfont-social {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.cid-r3QLcFwU88 .media-container-row .social-list .soc-item {
+  margin: 0 .5rem;
+}
+.cid-r3QLcFwU88 .media-container-row .social-list a {
+  margin: 0;
+  opacity: .5;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+.cid-r3QLcFwU88 .media-container-row .social-list a:hover {
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .cid-r3QLcFwU88 .media-container-row .social-list {
+    justify-content: center;
+    -webkit-justify-content: center;
+  }
+}
+.cid-r3QLcFwU88 .media-container-row .row-copirayt {
+  word-break: break-word;
+  width: 100%;
+}
+.cid-r3QLcFwU88 .media-container-row .row-copirayt p {
+  width: 100%;
+}
+
+.cid-r3QLMLl5AB .input-group-btn {
+  display: block;
+  text-align: center;
+}
+.cid-r3QLMLl5AB H2 {
+  color: #ffffff;
+}
+.cid-r3QLMLl5AB LABEL {
+  color: #ffffff;
+}
 .btn-secondary,
 .btn-secondary:active {
   background-color: #fe2626 !important;
